@@ -1,0 +1,24 @@
+Small business specific issues
+-----------------------------------
+ordering checks,
+fraud,
+opening a loan,
+enabling/help with invoices,
+wheres my deposit (the payment)-> (delayed in the case of fraud),
+help/ questions abt PCI compliance,
+Questions about the UI mislinked entries,
+Out of paper (reciepts)
+credit card terminal malfunctions,
+adding a mobile terminal solution,
+online forms -> setting up a webpage that takes payment
+how are my sales trending,
+questions about sale items, which items are trending
+general business advice,
+user activity, who is active and when
+get my statement-> monthly statement (transaction history with fees etc.)
+proactive advice -> cashflow forecasting(what payments are coming up) , we don't see what theyre paying currently (outbound paying)
+subscription packages that the business offers, which customer's subscriptions are expiring
+How many outstanding invoices do I have?
+
+
+
