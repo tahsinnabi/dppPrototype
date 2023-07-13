@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-
+	<!--Jstable beginning-->
+	<link rel="stylesheet" href="jstable.css" />
+	<script src="jstable.min.js"></script>
 <!--Mbeginning of lex chat-->
 <head>
 	<script src="https://sdk.amazonaws.com/js/aws-sdk-2.41.0.min.js"></script>
@@ -94,6 +96,9 @@
 		display: flex;
 		flex-direction: column;
 	  }
+	  table {
+  border-spacing: 10px;
+	}
   
 	  .menu-option {
   display: flex;
@@ -135,6 +140,11 @@
 		background-color: #7d7;
 	  }
   
+	  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 	  .bot-response {
 		margin: 4px;
 		padding: 4px 10px 4px 10px;
@@ -269,6 +279,22 @@ input[type="text"] {
   box-shadow: 3px 3px 3px black;
   border-radius: 5px;
 }
+.shadowbox3 {
+  width: 590px;
+  height: 460px;
+  padding: 15px;
+  background-color: gainsboro;
+  box-shadow: 3px 3px 3px black;
+  border-radius: 5px;
+}
+.shadowbox4 {
+	width: 310px;
+  height: 460px;
+  padding: 15px;
+  background-color: gainsboro;
+  box-shadow: 3px 3px 3px black;
+  border-radius: 5px;
+}
 	</style>
 	
 </head>
@@ -350,10 +376,103 @@ input[type="text"] {
 		<p>Content for the Payment menu option</p>
 	  </div>
 	  <div class="content hidden">
-		<div class="shadowbox1">
-			<h2>Activity</h2>
-			<p>Content for the Activity medkflsa;fjlkdsfjlksdflsdkjflsdjflsdjfklsdjflksdfjlksdjflsdfksflksflk;sjf;lksajkdflnu option</p>
+		<h2>Activity</h2>
+		<table>
+			<tr>
+				<td>
+		<div class="shadowbox3">
+			<table id="example">
+				<thead>
+				  <tr>
+					<th>Name</th>
+					<th>Amount</th>
+					<th>Date & Time</th>
+					<th>Zip Code</th>
+					<th>Method</th>
+					<th>Status</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<td>Rhona Carey</td>
+					<td>$5.00</td>
+					<td>2020-03-12 03:47</td>
+					<td>30144</td>
+					<td>CC-Visa</td>
+					<td>Appr</td>
+				  </tr>
+				  <tr>
+					<td>James George</td>
+					<td>$23.40</td>
+					<td>2023-05-12 06:42</td>
+					<td>30604</td>
+					<td>CC-Amex</td>
+					<td>Pend</td>
+				  </tr>
+				  				<tr>
+					<td>Terry Han</td>
+					<td>$10.54</td>
+					<td>2022-03-11 10:49</td>
+					<td>30314</td>
+					<td>ACH</td>
+					<td>Appr</td>
+				  </tr>
+				  				<tr>
+					<td>Sandra Frey</td>
+					<td>$80.52</td>
+					<td>2022-07-08 16:51</td>
+					<td>31234</td>
+					<td>CC-Visa</td>
+					<td>Appr</td>
+				  </tr>
+				  				<tr>
+					<td>Joe Shmoe</td>
+					<td>$13.04</td>
+					<td>2022-05-02 14:32</td>
+					<td>30404</td>
+					<td>CC-Amex</td>
+					<td>Decl</td>
+				  </tr>
+				  				<tr>
+					<td>Yang M.</td>
+					<td>$41.27</td>
+					<td>2022-09-15 18:43</td>
+					<td>30123</td>
+					<td>CC-Visa</td>
+					<td>Appr</td>
+				  </tr>
+				  				<tr>
+					<td>Malik Patel</td>
+					<td>$66.72</td>
+					<td>2021-03-10 07:25</td>
+					<td>30231</td>
+					<td>ACH</td>
+					<td>Appr</td>
+				  </tr>
+				  <tr>
+					<td>Rhona Carey</td>
+					<td>$5.00</td>
+					<td>2020-03-12 03:47</td>
+					<td>30144</td>
+					<td>CC-Visa</td>
+					<td>Appr</td>
+				  </tr>
+				  <tr>
+					<td>James George</td>
+					<td>$23.40</td>
+					<td>2023-05-12 06:42</td>
+					<td>30604</td>
+					<td>CC-Amex</td>
+					<td>Pend</td>
+				  </tr>
+				
+				</tbody>
+			  </table>
 		</div>
+		</td>
+			<td><div class="shadowbox4"><img width = 310 class = center src="GADensity.png"><img width = 310 class = center src="SalesVolume.png"></div></td>
+			</tr>
+		</table>
 	  </div>
 	  <div class="content hidden">
 		<h2>Customers</h2>
@@ -372,7 +491,7 @@ input[type="text"] {
 			<th style="width: 25%;">Common Issues</th>
 		  </tr>
 		  <tr>
-			
+		
 			<td>
 				<div class="shadowbox2">
 					Having an issue or have a question? We are here to help.
@@ -398,7 +517,7 @@ input[type="text"] {
 			  </div>
 			</td>
 			<td style="vertical-align: top; height: 100px;">
-			<div = class="shadowbox1">
+			<div class="shadowbox1">
 			  <h3>Help Resources Customer Forum & F.A.Q.</h3>
 			  <p>Tap into the wisdom and experience of all our other customers. Or visit our page of frequently asked questions at <a href="url">dpplatform.faq.com</a></p>
 			</div>
@@ -445,7 +564,8 @@ input[type="text"] {
     calendar.appendChild(day);
   }
 }
-createCalendar();
+createCalendar();//adding diff functions
+new JSTable("#example"); 
 
 		function switchContent(menuIndex) {
 		  var contentSections = document.getElementsByClassName('content');
