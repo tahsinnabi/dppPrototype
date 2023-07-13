@@ -10,7 +10,7 @@
 			bottom: 0;
 			right: 0;
 			width: 400px;
-			border: 1px solid #ccc;
+			border: 1px solid #cccccc;
 			background-color: #eee;
 			overflow: hidden;
 			transition: height 0.3s;
@@ -29,7 +29,7 @@
 	
 		#toggleButton {
 			cursor: pointer;
-			background-color: #ddd;
+			background-color: #4582f3;
 			text-align: center;
 			padding: 2px;
 		}
@@ -89,7 +89,7 @@
 		height: 100vh;
 		padding: 10px;
 		position: fixed;
-		top: 60px;
+		top: 40px;
 		left: 0;
 		display: flex;
 		flex-direction: column;
@@ -339,11 +339,12 @@ input[type="text"] {
 			</tr>
 		  </table>
 		  
-		
+		<div class ="shadowbox1">
 		<p>On <b>Friday July 21st</b>, there is a 96% chance of rain. Expect <b>low foot traffic</b>.<br>
 		Last year on <b>Tuesday July 4th</b> (<i>Independence day</i>), sales saw a 23% increase.<br>
 		Monthly sales have <b>doubled </b>since your first month in business. Great job! </p>
-	  </div>
+	</div>  
+	</div>
 	  <div class="content hidden">
 		<h2>Payments</h2>
 		<p>Content for the Payment menu option</p>
@@ -383,8 +384,9 @@ input[type="text"] {
 				Starts with how to take a payment using the Web Terminal and covers how to use the Deluxe forecasting features. <br><button type="submit" >Download User Guide</button></p>
 				</div>
 			</td>
-			<td><h3>PCI Compliance</h3> Current Status: Compliant<p>Stay compliant to avoid paying a $XX.XX monthly fee.</p> Your next payment is due in <b>five</b> days.</td>
-		  </tr>
+			<td>
+				<h3>PCI Compliance</h3> Current Status: Compliant<p>Stay compliant to avoid paying a $XX.XX monthly fee.</p> Next payment is due in <b>five</b> days.</td>
+				</tr>
 		  <tr>
 			<td>
 			  <div class="card">
@@ -476,7 +478,7 @@ createCalendar();
 			var toggleButton = document.getElementById('toggleButton');
 			conversation.style.display = trayExpanded ? 'block' : 'none';
 			chatform.style.display = trayExpanded ? 'block' : 'none';
-			toggleButton.innerHTML = trayExpanded ? 'Chat' : 'Open Chat';
+			toggleButton.innerHTML = trayExpanded ? 'Chat ↓' : 'Chat ↑';
 		}
 
 		// set the focus to the input box
@@ -555,7 +557,16 @@ createCalendar();
 			var responsePara = document.createElement("P");
 			responsePara.className = 'lexResponse';
 			if (lexResponse.message) {
+				if (lexResponse.message.slice(-3) == "jpg" || lexResponse.message.slice(-3) == "png") {
+					let img = document.createElement('img');
+					img.width = 250
+					img.height = 250
+					img.src = lexResponse.message;
+					responsePara.appendChild(img)
+				} else {
 				responsePara.appendChild(document.createTextNode(lexResponse.message));
+				responsePara.append(appendChild(document.createElement()))
+				}
 				responsePara.appendChild(document.createElement('br'));
 			}
 			if (lexResponse.dialogState === 'ReadyForFulfillment') {
